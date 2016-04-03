@@ -1,0 +1,9 @@
+grammar org.xtext.contracts.service.Sei with org.eclipse.xtext.common.Terminals
+
+generate sei "http://www.xtext.org/contracts/service/Sei"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';

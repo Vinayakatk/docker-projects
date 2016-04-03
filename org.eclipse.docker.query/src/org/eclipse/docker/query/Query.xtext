@@ -1,0 +1,9 @@
+grammar org.eclipse.docker.query.Query with org.eclipse.xtext.common.Terminals
+
+generate query "http://www.eclipse.org/docker/query/Query"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
