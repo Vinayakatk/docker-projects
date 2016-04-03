@@ -1,0 +1,6 @@
+version: '2'
+services:
+    kalla:
+        image: busybox
+        command: mkdir vini \
+                 ls 
