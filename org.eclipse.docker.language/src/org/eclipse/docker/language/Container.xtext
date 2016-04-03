@@ -1,0 +1,21 @@
+grammar org.eclipse.docker.language.Container with org.eclipse.xtext.common.Terminals
+
+generate container "http://www.eclipse.org/docker/language/Container"
+
+Docker:
+	(containers+=Container | networks+=Network | volumes+=Volume)*
+;
+
+Network:
+	'network' name=ID '{'  '}'
+;
+
+Volume:
+	'volume'  name=ID '{'  '}'
+;
+
+Container:
+	'container' name=ID '{'
+
+	'}'
+;
